@@ -6,7 +6,7 @@
 
 :root {
   --text-color: white;
-  --bg-url: url(assets/bg-desktop.jpg);
+  --bg-url: url(assets/bg-mobile.jpg);
   --stroke-color: rgba(255, 255, 255, 0.5);
   --surface-color: rgba(255, 255, 255, 0.1);
   --surface-color-hover: rgba(255, 255, 255, 0.05);
@@ -16,7 +16,7 @@
 
 .light {
   --text-color: purple;
-  --bg-url: url(assets/bg-desktop-light.jpg);
+  --bg-url: url(assets/bg-mobile-light.jpg);
   --stroke-color: rgba(0, 0, 0, 0.5);
   --surface-color: rgba(0, 0, 0, 0.05);
   --surface-color-hover: rgba(0, 0, 0, 0.02);
@@ -59,11 +59,11 @@ body * {
 }
 
 /* SWITCH */
-#switch{
+#switch {
   position: relative;
   width: 66px;
   margin: 4px auto;
-  }
+}
 
 #switch button {
   width: 32px;
@@ -73,26 +73,23 @@ body * {
   border-radius: 50%;
   position: absolute;
   z-index: 1;
-  top:50%;
+  top: 50%;
   left: 0;
   transform: translateY(-50%);
   box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.4);
-  
 }
 
-.light #switch button{
-right: 0;
-left: initial;
-
+.light #switch button {
+  right: 0;
+  left: initial;
 }
-
 
 #switch span {
-  display:block;
+  display: block;
   width: 64px;
   height: 24px;
-  border:1px solid var(--stroke-color);
-  background:var(--surface-color);
+  border: 1px solid var(--stroke-color);
+  background: var(--surface-color);
   border-radius: 9999px;
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
@@ -152,4 +149,15 @@ footer {
   text-align: center;
   font: size 14px;
   padding: 24px;
+}
+
+/* media queries*/
+
+@media (min-width: 700px) {
+  :root {
+    --bg-url: url(assets/bg-desktop.jpg);
+  }
+  .light {
+    --bg-url: url(assets/bg-desktop-light.jpg);
+  }
 }
